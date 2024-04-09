@@ -1,0 +1,9 @@
+.contenedor {
+  display: flex; /* Establece el contenedor como un flex container */
+  justify-content: center;
+  padding: 10px;
+}
+
+.contenedor button {
+  margin-right: 10px; /* Margen entre los botones */
+}

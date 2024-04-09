@@ -1,0 +1,38 @@
+<div>
+  <hr>
+  <div align="center">
+    <p>{{ nameSpiterman }}</p>
+  </div>
+  <div>
+    <dl>
+      <td>Nombre: </td>
+      <dd> {{ name }} </dd>
+
+      <td>Edad: </td>
+      <dd> {{ edad }} </dd>
+
+      <td>Método: </td>
+      <dd> {{ getHeroDescription() }} </dd> 
+
+      <td>Capitalizado: </td>
+      <dd> {{ capitalizedName }} </dd>
+    </dl>
+  </div>
+  <div>
+    <button *ngIf="name !== 'Bon'" (click)="changeHero()" class="btn btn-primary mx-2">
+      Cambiar nombre
+    </button>
+    <button *ngIf=" edad !== 26" (click)="changeEdad()" class="btn btn-primary">
+      Cambiar edad
+    </button>
+    <button (click)="resetBy()" class="btn btn-primary mx-2">
+      Restablecer Edad
+    </button>
+    <button (click)="addNewUser()" class="btn btn-primary">
+      Agregar Nuevo Usuario
+    </button>
+    <button (click)="eraseData()" class="btn btn-primary mx-2">
+      Eliminar Datos
+    </button>
+  </div>
+</div>

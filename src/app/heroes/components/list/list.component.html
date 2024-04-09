@@ -1,0 +1,71 @@
+<hr>
+<div align="center">
+  <p>list works!</p>
+</div>
+<div>
+  <h3>Lista de Héroes</h3>
+</div>
+<div>
+  <ul class="mt-2 list-group">
+    <li *ngFor="let name of heroNames" class="list-group-item">
+      <strong> {{ name }} </strong>
+    </li>
+  </ul>
+</div>
+<div class="contenedor">
+<div align="center">
+  <button (click)="removeLastHeroe()" class="btn btn-outline-danger mx-2">
+    Borrar último héroe
+  </button>
+</div>
+<div align="center">
+  <button (click)="regenerateList()" class="btn btn-outline-danger">
+    Generar nuevamente la lista
+  </button>
+</div>
+<div align="center">
+  <button (click)="eraseListHeroes()" class="btn btn-outline-danger">
+    Limpiar lista heroes borrados
+  </button>
+</div>
+<div align="center">
+  <button (click)="showDeletedHeroes()" class="btn btn-outline-danger">
+    Mostrar héroes borrados
+  </button>
+</div>
+<div align="center">
+  <button (click)="hideDeletedHeroes()" class="btn btn-outline-danger">
+    Ocultar héroes borrados
+  </button>
+</div>
+</div>
+<div>
+  <!-- ejemplo de como usar un (ng-template) -->
+  <h3> Héroe borrado: <small class="text-danger"> {{ heroeBorrado }} </small> </h3>
+    <h3 *ngIf="mostrarHeroesBorrados && !ocultarHeroesBorrados; else nothingWasDeleted" > Héroes borrados:
+      <small class="text-danger">
+        <li *ngFor="let heroeBorrado of heroesBorrados"> {{ heroeBorrado }} </li>
+      </small>
+    </h3>
+    <ng-template #nothingWasDeleted>
+      <h3>No ha borrado nada.</h3>
+    </ng-template>
+</div>
+
+<!-- ejemplo de como usar un (ng-template) -->
+
+<!-- En este caso, estamos utilizando ng-template junto con ngIf para definir una plantilla condicional que solo se aplicará a los números pares.
+
+[ngIf]="numero % 2 === 0": Esta es una expresión Angular que evalúa si el número es par. Si el número es par (es decir, el residuo de la división por 2 es 0), entonces se mostrará el contenido de la plantilla.
+
+<li>{{ numero }}</li>: Este es el contenido de la plantilla. Aquí, estamos simplemente mostrando el número dentro de un elemento de lista <li>.
+
+-->
+
+<!-- <ul>
+  <ng-container *ngFor="let numero of numeros">
+    <ng-template [ngIf]="numero % 2 === 0">
+      <li>{{ numero }}</li>
+    </ng-template>
+  </ng-container>
+</ul> -->
