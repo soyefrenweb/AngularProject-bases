@@ -48,5 +48,7 @@ export class ListComponent {
     this.mostrarHeroesBorrados = false; // Restablecer la bandera en false para asegurarse de que se oculten los héroes borrados
   }
 
+  // se actualiza git, en mi rama efrengit-desarrollo. 
+
 
 }
