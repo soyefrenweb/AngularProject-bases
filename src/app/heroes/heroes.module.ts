@@ -22,4 +22,4 @@ import { ListComponent } from './components/list/list.component';
 })
 
 
-export class heroesModule{}
+export class HeroesModule{}
